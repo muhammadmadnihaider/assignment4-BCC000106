@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      var email = prompt("enter your email address");
+      var regex = /[a-zA-Z]/;
+      if (email.includes("@")) {
+        var newEmail = email.split("@");
+        if (
+          newEmail[0].length > 0 &&
+          newEmail[1].indexOf(".") === 0 &&
+          regex.test(newEmail[1])
+        ) {
+          console.log("valid email, ", email);
+        } else {
+          console.log("please enter valid email address");
+        }
+      } else {
+        console.log("please enter valid email address");
+      }
+    </script>
+  </body>
+</html>

@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      var numbers = /[0-9]/;
+      var num = "0123456789";
+      var lowercase = /[a-z]/;
+      var uppercase = /[A-Z]/;
+      var password = prompt(
+        "Enter password from a-z, A-Z and 0-9 and must contain atleast 8 chars"
+      );
+      if (
+        password.length > 8 &&
+        !num.includes(password.charAt(0)) &&
+        numbers.test(password) &&
+        lowercase.test(password) &&
+        uppercase.test(password)
+      ) {
+        console.log("valid password", password);
+      } else {
+        console.log("invalid");
+      }
+    </script>
+  </body>
+</html>

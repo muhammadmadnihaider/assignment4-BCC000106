@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      var date = new Date();
+      var miliSec = date.getTime();
+      var minutes = miliSec / 1000 / 60;
+      document.write(`
+      Current Date : ${date} <br>
+      Elapsed milliseconds since January 1, 1970: ${miliSec}<br>
+      Elapsed minutes since January 1, 1970: ${minutes}
+      `);
+    </script>
+  </body>
+</html>

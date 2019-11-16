@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Document</title>
+  </head>
+  <script>
+    var counting = [
+      "",
+      "one",
+      "two",
+      "three",
+      "four",
+      "five",
+      "six",
+      "seven",
+      "eight",
+      "nine"
+    ];
+    var counteen = [
+      "",
+      "eleveen",
+      "twelve",
+      "thirteen",
+      "fourteen",
+      "fifteen",
+      "sixteen",
+      "seventeen",
+      "eighteen",
+      "nineteen",
+      "twenty"
+    ];
+    var magnitude = [
+      "",
+      "ten",
+      "twenty",
+      "thirty",
+      "fourty",
+      "fifty",
+      "sixty",
+      "seventy",
+      "eighty",
+      "ninty",
+      "hundred"
+    ];
+
+    while (true) {
+      var number = parseInt(prompt("enter number from 1 to 100"));
+      var num = Math.floor(number / 10);
+      var numb = number % 10;
+      var word = "";
+
+      if (num === 1 && numb !== 0) {
+        word = counteen[numb];
+        alert(word);
+      } else if (numb === number) {
+        word = counting[number];
+        alert(word);
+      } else {
+        word = magnitude[num] + counting[numb];
+        alert(word);
+      }
+    }
+  </script>
+  <body></body>
+</html>
